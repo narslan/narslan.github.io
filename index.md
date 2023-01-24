@@ -1,6 +1,16 @@
-___
+---
 layout: default
-title:  Nevroz Arslan / Home
-___
-## {{page.title}}
-<div>hello camel</div>
+---
+
+# This is my projects
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+     
+    </li>
+  {% endfor %}
+</ul>
+
+
+
