@@ -2,7 +2,8 @@
 layout: default
 ---
 
-# This is my projects
+
+<a href="/scheme"> Exploring SRFI-178 </a>
 <ul>
   {% for post in site.posts %}
     <li>
