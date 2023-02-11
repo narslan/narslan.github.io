@@ -5,12 +5,14 @@ title:  "Scheme Cookbook with SRFI-178"
 ## {{page.title}}
 A bitvector is a data structure that stores bits.  
 It is powerful at using bit-level parallelism to perform operations quickly.  
-This power is exploited in areas where efficiency is most appreciated.  
 
 ### Constructing bit vectors.
 
-`b` stands for the inital value of bit (seed, the left most bit).
+`b` stands for the current state of bit .
+`seed` is the left most bit.
+`_` is the current index
 
+### bitvector of a flipping sequence
 ```scheme
  (bitvector-unfold
    (lambda (_ b)
@@ -21,7 +23,7 @@ This power is exploited in areas where efficiency is most appreciated.
 #bitvector(0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1)
 ```
 
-You want to build a bit vector with a particular bit set.
+### bitvector of particular bit set.
 
 ```scheme
 (define (set-bitvector-at id)
@@ -34,4 +36,12 @@ You want to build a bit vector with a particular bit set.
 
 ```sh
 #bitvector(0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0)
+```
+
+### bitvector of a random number
+
+```scheme
+(define (generate-random-bits )
+	(bitvector-unfold (lambda (_) (pseudo-random-integer 2)) 64))
+(bitvector->integer ( generate-random-bits))
 ```
