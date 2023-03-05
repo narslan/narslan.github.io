@@ -46,3 +46,13 @@ Similarly, when `post-thunk` is called due to a continuation jump,
 the continuation of `post-thunk` calls less deeply nested post-thunks,  
 them jumps to the destination continuation, then continues from the `dynamic-wind`
 application.
+
+```
+(dynamic-wind
+	(lambda () (display 'z))
+	(lambda () (display 'e))
+	(lambda () (display 'n)))
+```
+```sh
+$> zen
+```
