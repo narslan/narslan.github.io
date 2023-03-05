@@ -14,10 +14,13 @@ a {
   color: #0366d6;
 }
 
+p {
+font-family: "Noto Serif"
+}
+
 code,
 pre {
-  font-family: Courier, monospace;
-  background-color: #2b2b2b;
-  color: #fff;
-  padding: 0.25em
+  font-family: monospace;
+  padding: 0.25em;
+  line-height: 2.0;
 }

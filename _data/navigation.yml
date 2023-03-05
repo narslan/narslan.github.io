@@ -2,3 +2,6 @@
   link: /scheme.html
 - name: About
   link: /about.html
+- name: Dynamic wind
+  link: /websocket.html
+
