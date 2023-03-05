@@ -15,9 +15,14 @@ a {
 }
 
 p {
-font-family: "Noto Serif"
+font-family: "Noto Serif";
+padding: 0.5em;
 }
 
+ol {
+padding: 0.5em;
+margin-left: 1.0em;
+}
 code,
 pre {
   font-family: monospace;
